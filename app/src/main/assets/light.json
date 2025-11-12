@@ -1,0 +1,10 @@
+{
+  "name": "IntelliJ Light Theme",
+  "colors": {
+    "background": "#FFFFFF",
+    "foreground": "#000000",
+    "editor": {
+      "foreground": "#080808"
+    }
+  }
+}

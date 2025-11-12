@@ -1,0 +1,11 @@
+{
+  "name": "IntelliJ Dark Theme",
+  "type": "dark",
+  "colors": {
+    "background": "#1E1F22",
+    "foreground": "#DFE1E5",
+    "editor": {
+      "foreground": "#BDC0C9"
+    }
+  }
+}
