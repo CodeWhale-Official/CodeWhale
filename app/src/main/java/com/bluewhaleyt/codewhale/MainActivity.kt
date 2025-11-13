@@ -10,9 +10,14 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.bluewhaleyt.codewhale.common.theme.Theme
 import com.bluewhaleyt.codewhale.common.theme.ThemeDefinition
+import com.bluewhaleyt.codewhale.editor.EditorState
+import com.bluewhaleyt.codewhale.editor.ui.Editor
 
 class MainActivity : ComponentActivity() {
 
@@ -28,9 +33,16 @@ class MainActivity : ComponentActivity() {
                     Column(Modifier.safeDrawingPadding()) {
                         Text("Colors")
                         Text(Theme.colors.toString())
+
+                        Editor(
+                            state = editorState,
+                            onTextChange = { editorState = editorState.copy(text = it) }
+                        )
                     }
                 }
             }
         }
     }
 }
+
+var editorState by mutableStateOf(EditorState())

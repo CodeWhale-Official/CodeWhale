@@ -27,3 +27,4 @@ rootProject.name = "CodeWhale"
 include(":app")
 include(":common")
 include(":common")
+include(":editor")

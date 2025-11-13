@@ -36,8 +36,8 @@ class ThemeDefinition internal constructor(
 }
 
 internal fun ThemeDefinition.createMaterialColorScheme(): ColorScheme {
-    val darkTheme = type == ThemeType.DARK
-    val baseScheme = if (darkTheme) darkColorScheme() else lightColorScheme()
+    val isDark = type == ThemeType.DARK
+    val baseScheme = if (isDark) darkColorScheme() else lightColorScheme()
 
     return baseScheme.copy(
 //        primary =  ,
@@ -91,4 +91,4 @@ internal fun ThemeDefinition.createMaterialColorScheme(): ColorScheme {
     )
 }
 
-internal val LocalThemeDefinition = staticCompositionLocal<ThemeDefinition>()
+val LocalThemeDefinition = staticCompositionLocal<ThemeDefinition>()

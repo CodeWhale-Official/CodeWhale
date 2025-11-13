@@ -29,6 +29,7 @@ android {
 
 dependencies {
     implementation(project(":common"))
+    implementation(project(":editor"))
 
     coreLibraryDesugaring(libs.android.desugar.jdk.libs)
 }

@@ -4,6 +4,7 @@
     "background": "#FFFFFF",
     "foreground": "#000000",
     "editor": {
+      "background": "#FFFFFF",
       "foreground": "#080808"
     }
   }
