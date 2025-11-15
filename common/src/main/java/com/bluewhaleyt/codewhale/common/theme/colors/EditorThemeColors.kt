@@ -9,4 +9,5 @@ data class EditorThemeColors internal constructor(
     override val foreground: HexColorString = HexColorString.Unspecified
 ) : EditorThemeColorsProvider
 
-interface EditorThemeColorsProvider : ThemeColorsProvider
+@PublishedApi
+internal interface EditorThemeColorsProvider : ThemeColorsProvider

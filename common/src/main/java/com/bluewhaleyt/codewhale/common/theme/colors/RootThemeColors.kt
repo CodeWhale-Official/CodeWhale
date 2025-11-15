@@ -11,7 +11,8 @@ data class RootThemeColors internal constructor(
     override val editor: EditorThemeColors = EditorThemeColors()
 ) : RootThemeColorsProvider
 
-interface RootThemeColorsProvider : ThemeColorsProvider {
+@PublishedApi
+internal interface RootThemeColorsProvider : ThemeColorsProvider {
 
     @SerialName("editor")
     val editor: EditorThemeColors

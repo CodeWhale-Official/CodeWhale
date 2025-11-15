@@ -3,12 +3,16 @@ package com.bluewhaleyt.codewhale.editor.theme
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import com.bluewhaleyt.codewhale.common.theme.ThemeDefinition
+import com.bluewhaleyt.codewhale.common.theme.colors.EditorThemeColors
 import io.github.rosemoe.sora.langs.textmate.TextMateColorScheme
 import io.github.rosemoe.sora.langs.textmate.registry.ThemeRegistry
 
 class EditorTheme internal constructor(
     private val definition: ThemeDefinition?
 ) : TextMateColorScheme(themeRegistry, themeRegistry.currentThemeModel) {
+
+    val colors: EditorThemeColors?
+        get() = definition?.colors?.editor
 
     init {
         definition?.let {

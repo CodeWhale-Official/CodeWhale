@@ -14,6 +14,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import com.bluewhaleyt.codewhale.common.theme.Theme
 import com.bluewhaleyt.codewhale.common.theme.ThemeDefinition
 import com.bluewhaleyt.codewhale.editor.EditorState
@@ -45,4 +46,6 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-var editorState by mutableStateOf(EditorState())
+var editorState by mutableStateOf(EditorState(
+    text = LoremIpsum(1000).values.joinToString()
+))

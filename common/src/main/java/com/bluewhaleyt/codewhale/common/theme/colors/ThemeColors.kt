@@ -3,7 +3,8 @@ package com.bluewhaleyt.codewhale.common.theme.colors
 import com.bluewhaleyt.codewhale.common.theme.HexColorString
 import kotlinx.serialization.SerialName
 
-interface ThemeColorsProvider {
+@PublishedApi
+internal interface ThemeColorsProvider {
 
     @SerialName("background")
     val background: HexColorString
